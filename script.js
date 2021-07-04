@@ -1,6 +1,11 @@
-var word = document.getElementById("word");
-var num = true;
+var num = document.getElementById("word");
+var answer = document.getElementById("words")
+var answer_new = document.getElementById("answer")
+
+
+var bool = true;
 var things = [0,0,0];
+answer.innerHTML = things
 
 /*function neg_pos(){
 	if (num === true){
@@ -12,160 +17,190 @@ var things = [0,0,0];
 	}
 }*/
 
+
 function zero() {
-	word.innerHTML += 0;
-	if (num === true){
-		things[0] = word.innerHTML;
-		console.log(things);
+	num.value += 0;
+	if (bool === true){
+		things[0] = num.value;
 	} else {
-		things[2] = word.innerHTML;
-		console.log(things);
+		things[2] = num.value;
 	}
 };
 
 function one() {
-	word.innerHTML += 1;
-	if (num === true){
-		things[0] = word.innerHTML;
-		console.log(things);
+	num.value += 1;
+	if (bool === true){
+		things[0] = num.value;
 	} else {
-		things[2] = word.innerHTML;
-		console.log(things);
+		things[2] = num.value;
 	}
 };
- 
+
 function two() {
-	word.innerHTML += 2;
-	if (num === true){
-		things[0] = word.innerHTML;
-		console.log(things);
+	num.value += 2;
+	if (bool === true){
+		things[0] = num.value;
 	} else {
-		things[2] = word.innerHTML;
-		console.log(things);
+		things[2] = num.value;
 	}
 };
 
 function three() {
-	word.innerHTML += 3;
-	if (num === true){
-		things[0] = word.innerHTML;
-		console.log(things);
+	num.value += 3;
+	if (bool === true){
+		things[0] = num.value;
 	} else {
-		things[2] = word.innerHTML;
-		console.log(things);
+		things[2] = num.value;
 	}
 };
-
+  
 function four() {
-	word.innerHTML += 4;
-	if (num === true){
-		things[0] = word.innerHTML;
-		console.log(things);
+	num.value += 4;
+	if (bool === true){
+		things[0] = num.value;
 	} else {
-		things[2] = word.innerHTML;
-		console.log(things);
+		things[2] = num.value;
 	}
 };
 
 function five() {
-	word.innerHTML += 5;
-	if (num === true){
-		things[0] = word.innerHTML;
-		console.log(things);
+	num.value += 5;
+	if (bool === true){
+		things[0] = num.value;
 	} else {
-		things[2] = word.innerHTML;
-		console.log(things);
+		things[2] = num.value;
 	}
 };
 
 function six() {
-	word.innerHTML += 6;
-	if (num === true){
-		things[0] = word.innerHTML;
-		console.log(things);
+	num.value += 6;
+	if (bool === true){
+		things[0] = num.value;
 	} else {
-		things[2] = word.innerHTML;
-		console.log(things);
+		things[2] = num.value;
 	}
 };
 
 function seven() {
-	word.innerHTML += 7;
-	if (num === true){
-		things[0] = word.innerHTML;
-		console.log(things);
+	num.value += 7;
+	if (bool === true){
+		things[0] = num.value;
 	} else {
-		things[2] = word.innerHTML;
-		console.log(things);
+		things[2] = num.value;
 	}
 };
 
 function eight() {
-	word.innerHTML += 8;
-	if (num === true){
-		things[0] = word.innerHTML;
-		console.log(things);
+	num.value += 8;
+	if (bool === true){
+		things[0] = num.value;
 	} else {
-		things[2] = word.innerHTML;
-		console.log(things);
+		things[2] = num.value;
 	}
 };
 
 function nine() {
-	word.innerHTML += 9;
-	if (num === true){
-		things[0] = word.innerHTML;
-		console.log(things);
+	num.value += 9;
+	if (bool === true){
+		things[0] = num.value;
 	} else {
-		things[2] = word.innerHTML;
-		console.log(things);
+		things[2] = num.value;
 	}
 };
 
 
+
 function add(){
-	num = false;
+	if (bool === true){
+		things[0] = num.value;
+	} else {
+		things[2] = num.value;
+	}
+	bool = false;
 	things[1] = " + ";
-	word.innerHTML = "";
+	num.value = "";
+	answer.innerHTML = things
+
 };
 
 function multi(){
-	num = false;
+	if (bool === true){
+		things[0] = num.value;
+	} else {
+		things[2] = num.value;
+	}
+	bool = false;
 	things[1] = " x ";
-	word.innerHTML = "";
+	num.value = "";
+	answer.innerHTML = things
+
 };
 
 function sub(){
-	num = false;
+	if (bool === true){
+		things[0] = num.value;
+	} else {
+		things[2] = num.value;
+	}
+	bool = false;
 	things[1] = " - ";
-	word.innerHTML = "";
+	num.value = "";
+	answer.innerHTML = things
+
 };
 
 function divide(){
-	num = false;
+	if (bool === true){
+		things[0] = num.value;
+	} else {
+		things[2] = num.value;
+	};
+
+	bool = false;
 	things[1] = " / ";
-	word.innerHTML = "";
+	num.value = "";
+	answer.innerHTML = things
+
 };
 
+function clear(){
+	answer.innerHTML = things
+	things = [0,0,0]
+	bool = true
+	num.value = "";
+}
 
 function equal(){
+	var answer_var = 0
+
+	if (bool === true){
+		things[0] = num.value;
+	} else {
+		things[2] = num.value;
+	};
+
+	answer.innerHTML = things;
+
 	if (things[1] === (" + ")){
-		console.log(parseInt(things[0]) + parseInt(things[2])) 
+		answer_var = parseFloat(things[0]) + parseFloat(things[2])
 	};
 
 	if (things[1] === (" - ")){
-		console.log(parseInt(things[0]) - parseInt(things[2])) 
+		answer_var = parseFloat(things[0]) - parseFloat(things[2])
 	};
 
 	if (things[1] === (" / ")){
-		console.log(parseInt(things[0]) / parseInt(things[2])) 
+		answer_var = parseFloat(things[0]) / parseFloat(things[2])
 	};
 
 	if (things[1] === (" x ")){
-		console.log(parseInt(things[0]) + parseInt(things[2])) 
+		answer_var = parseFloat(things[0]) * parseFloat(things[2])
 	};
+	
+	answer_new.innerHTML = answer_var
 
 	things = [0,0,0]
-	num = true
-	word.innerHTML = "";
+	bool = true
+	num.value = "";
+
 }
