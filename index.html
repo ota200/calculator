@@ -9,20 +9,30 @@
 
   	<body>
 
-		<button id="btn_0">0</button> 
-		<button id="btn_1">1</button>
-		<button id="btn_2">2</button>    
-		<button id="btn_3">3</button>
-		<button id="btn_4">4</button> 
-		<button id="btn_5">5</button>
-		<button id="btn_6">6</button> 
-		<button id="btn_7">7</button>
-		<button id="btn_8">8</button> 
-		<button id="btn_9">9</button>
-		<input id="words" ></input>
-		<button id="btn_enter" onclick="enter()">=</button>
+		<button id="btn_5" onclick="zero()">0</button>
+		<button id="btn_5" onclick="one()">1</button>
+		<button id="btn_5" onclick="two()">2</button>
+		<button id="btn_5" onclick="three()">3</button>
+		<button id="btn_5" onclick="four()">4</button>
+		<button id="btn_5" onclick="five()">5</button>
+		<button id="btn_5" onclick="six()">6</button>
+		<button id="btn_5" onclick="seven()">7</button>
+		<button id="btn_5" onclick="eight()">8</button>
+		<button id="btn_5" onclick="nine()">9</button>
 
+
+		<button id="btn_add" onclick="add()">+</button>
+		<button id="btn_multi" onclick="multi()">x</button>
+		<button id="btn_sub" onclick="sub()">-</button>
+		<button id="btn_divide" onclick="divide()">/</button>
+		<button id="btn_neg_pos" onclick="neg_pos()">-/+</button>
+
+		<button id="btn_equal" onclick="equal()">=</button>
+
+<!--		<h1 id="pos_neg"> the number is positive</h1> !-->
+		<h1 id="word"></h1>
 
     	<script src="script.js"></script>
+
 	</body>
 </html>
