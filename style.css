@@ -1,8 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+
 *{
 	background: #070810;
+	font-family: 'Montserrat', sans-serif;
 	color: #EBF9FF;
+	padding: 0;	
+	margin: 0;
 }
 
-buttons{
+div{
+	display: grid; 
+	position: relative;
+  	grid-gap: 1.75rem 3.5rem;
+	grid-template-columns: 5rem 5rem 5rem 5rem ;
+	left: 2rem;
+}
+
+div button{
 	color:#18284A;
+	border: #070810;
+	background: #52A5DE;
+	width:7rem;
+	height:7rem;
+	font-size: 3rem;
+	padding: 2rem 2rem;
+	display: inline-grid;
+	-moz-box-shadow: inset 0 0 10px #070810;
+   	-webkit-box-shadow: inset 0 0 10px #070810;
+   	box-shadow: inset 0 0 10px #070810;
+}
+
+input{
+
+	border: #18284A 0.3rem solid;
+}
+
+#num{
+	font-size:4.2rem;
 }

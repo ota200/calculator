@@ -1,21 +1,13 @@
-var num = document.getElementById("word");
+var num = document.getElementById("num");//input
 var answer = document.getElementById("words")
-var answer_new = document.getElementById("answer")
-
+var answer_new = document.getElementById("answer")// place where answer is put
 
 var bool = true;
 var things = [0,0,0];
-answer.innerHTML = things
+var symbols = null;
 
-/*function neg_pos(){
-	if (num === true){
-		word.innerHTML = parseInt(things[0]) * -1;
-		console.log(things);
-	} else {
-		word.innerHTML = parseInt(things[2]) * -1;
-		console.log(things);
-	}
-}*/
+
+answer.innerHTML = things
 
 
 function zero() {
@@ -163,11 +155,40 @@ function divide(){
 
 };
 
-function clear(){
+function power(){
+	if (bool === true){
+		things[0] = num.value;
+	} else {
+		things[2] = num.value;
+	};
+
+	bool = false;
+	things[1] = " ^ ";
+	num.value = "";
 	answer.innerHTML = things
+
+};
+
+function square(){
+	if (bool === true){
+		things[0] = Math.sqrt(parseFloat(things[0]));
+		console.log(things[0]);
+		num.value = things[0];
+	} else {
+		things[2] = Math.sqrt(parseFloat(things[2]));
+		console.log(things[2])
+		num.value = things[2];
+	};
+	answer.innerHTML = things;
+	
+}
+
+function clear(){
 	things = [0,0,0]
 	bool = true
 	num.value = "";
+	answer.innerHTML = things
+
 }
 
 function equal(){
