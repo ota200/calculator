@@ -1,106 +1,150 @@
 var num = document.getElementById("num");//input
 var answer = document.getElementById("words")
 var answer_new = document.getElementById("answer")// place where answer is put
+var history = document.getElementById("history")
 
 var bool = true;
 var things = [0,0,0];
 var symbols = null;
 
-
 answer.innerHTML = things
-
 
 function zero() {
 	num.value += 0;
 	if (bool === true){
 		things[0] = num.value;
+		history.innerHTML = things[0];
+
 	} else {
 		things[2] = num.value;
-	}
-};
+		history.innerHTML = things[2];
 
+	}
+
+};
+ 
 function one() {
 	num.value += 1;
 	if (bool === true){
 		things[0] = num.value;
+		history.innerHTML = things[0];
+
 	} else {
 		things[2] = num.value;
+		history.innerHTML = things[2];
+
 	}
+
 };
 
 function two() {
 	num.value += 2;
 	if (bool === true){
 		things[0] = num.value;
+		history.innerHTML = things[0];
+
 	} else {
 		things[2] = num.value;
+		history.innerHTML = things[2];
+
 	}
+
 };
 
 function three() {
 	num.value += 3;
 	if (bool === true){
 		things[0] = num.value;
+		history.innerHTML = things[0];
+
 	} else {
 		things[2] = num.value;
+		history.innerHTML = things[2];
+
 	}
+
 };
-  
 function four() {
 	num.value += 4;
 	if (bool === true){
 		things[0] = num.value;
+		history.innerHTML = things[0];
+
 	} else {
 		things[2] = num.value;
-	}
-};
+		history.innerHTML = things[2];
 
+	}
+
+};
 function five() {
 	num.value += 5;
 	if (bool === true){
 		things[0] = num.value;
+		history.innerHTML = things[0];
+
 	} else {
 		things[2] = num.value;
+		history.innerHTML = things[2];
+
 	}
+
 };
 
 function six() {
 	num.value += 6;
 	if (bool === true){
 		things[0] = num.value;
+		history.innerHTML = things[0];
+
 	} else {
 		things[2] = num.value;
-	}
-};
+		history.innerHTML = things[2];
 
+	}
+
+};
 function seven() {
 	num.value += 7;
 	if (bool === true){
 		things[0] = num.value;
+		history.innerHTML = things[0];
+
 	} else {
 		things[2] = num.value;
+		history.innerHTML = things[2];
+
 	}
+
 };
 
 function eight() {
 	num.value += 8;
 	if (bool === true){
 		things[0] = num.value;
+		history.innerHTML = things[0];
+
 	} else {
 		things[2] = num.value;
+		history.innerHTML = things[2];
+
 	}
+
 };
 
 function nine() {
 	num.value += 9;
 	if (bool === true){
 		things[0] = num.value;
+		history.innerHTML = things[0];
+
 	} else {
 		things[2] = num.value;
+		history.innerHTML = things[2];
+
 	}
+
 };
-
-
 
 function add(){
 	if (bool === true){
@@ -112,6 +156,7 @@ function add(){
 	things[1] = " + ";
 	num.value = "";
 	answer.innerHTML = things
+	history.innerHTML = things[1];
 
 };
 
@@ -125,6 +170,7 @@ function multi(){
 	things[1] = " x ";
 	num.value = "";
 	answer.innerHTML = things
+	history.innerHTML = things[1];
 
 };
 
@@ -138,6 +184,7 @@ function sub(){
 	things[1] = " - ";
 	num.value = "";
 	answer.innerHTML = things
+	history.innerHTML = things[1];
 
 };
 
@@ -152,6 +199,7 @@ function divide(){
 	things[1] = " / ";
 	num.value = "";
 	answer.innerHTML = things
+	history.innerHTML = things[1];
 
 };
 
@@ -218,7 +266,7 @@ function equal(){
 		answer_var = parseFloat(things[0]) * parseFloat(things[2])
 	};
 	
-	answer_new.innerHTML = answer_var
+	answer_new.innerHTML = "Answer: " + answer_var
 
 	things = [0,0,0]
 	bool = true

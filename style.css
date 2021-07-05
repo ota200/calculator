@@ -14,6 +14,8 @@ div{
   	grid-gap: 1.75rem 3.5rem;
 	grid-template-columns: 5rem 5rem 5rem 5rem ;
 	left: 2rem;
+	width: 20%;
+	top: 2rem;
 }
 
 div button{
@@ -28,13 +30,13 @@ div button{
 	-moz-box-shadow: inset 0 0 10px #070810;
    	-webkit-box-shadow: inset 0 0 10px #070810;
    	box-shadow: inset 0 0 10px #070810;
-}
-
-input{
-
-	border: #18284A 0.3rem solid;
+	
 }
 
 #num{
 	font-size:4.2rem;
+	border: #18284A 0.3rem solid;
+	margin-left: 2rem;
+	width: 32rem;
+	margin-top:4rem;
 }
